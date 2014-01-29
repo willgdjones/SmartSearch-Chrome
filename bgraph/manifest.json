@@ -1,0 +1,28 @@
+{
+    "name":"__MSG_extName__",
+    "version":"0.1",
+    "description":"__MSG_extDescription__",
+    "default_locale":"en",
+
+
+    "background": {
+    "page": "background.html"
+  },
+
+    "browser_action":{
+        "default_icon":"icon.png",
+        "popup":"popup.html"
+    },
+    "permissions":[
+        "history",
+        "webNavigation",
+        "webRequest",
+        "*://*/*",
+        "tabs"
+    ],
+    "chrome_url_overrides" : {
+        "newtab": "popup.html"
+    },
+    "content_security_policy":"default-src 'none'; script-src 'self' 'unsafe-eval'; style-src 'self'; img-src 'self'; ",
+    "manifest_version" : 2
+}
